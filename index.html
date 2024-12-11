@@ -30,6 +30,9 @@
         .project-card:hover {
             transform: scale(1.05);
         }
+        #impressum-text {
+            user-select: none; /* Markieren und Kopieren verhindern */
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -194,7 +197,19 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3 text-center">
-        <p>&copy; 2024 Mein Portfolio. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024. Alle Rechte vorbehalten. <span id="impressum-text"></span></p>
+        <script>
+            // Impressum-Daten verschleiern
+            const impressum = `
+                Adnan Schulze-Hüneke<br>
+                Wacholderweg 8<br>
+                38179 Schwülper<br>
+                E-Mail: <a href='mailto:adnanschulzehueneke@outlook.de'>adnanschulzehueneke@outlook.de</a>
+            `;
+            document.getElementById('impressum-text').innerHTML = impressum.replace(/./g, char => {
+                return `&#${char.charCodeAt(0)};`;
+            });
+        </script>
     </footer>
 
     <!-- Bootstrap JS -->
