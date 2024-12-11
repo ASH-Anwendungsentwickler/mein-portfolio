@@ -24,10 +24,6 @@
         .non-selectable {
             user-select: none; /* Verhindert Markieren und Kopieren */
         }
-        .hidden-content {
-            unicode-bidi: bidi-override; /* Erschwert das automatische Lesen */
-            direction: rtl; /* Textfluss umkehren */
-        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -44,14 +40,14 @@
         <h1 class="text-3xl font-bold mb-4">Impressum</h1>
         <p><strong>Angaben gemäß &sect; 5 TMG:</strong></p>
         <p class="non-selectable">
-            <span class="hidden-content">ekenuhzehlucsnadA</span><br>
-            <span class="hidden-content">8 grewoledhcaW</span><br>
-            <span class="hidden-content">repl&uuml;hwS 97183</span><br>
-            <span class="hidden-content">dnalhcstueD</span>
+            <span class="reverse-text">ekenuhzehlucsnadA</span><br>
+            <span class="reverse-text">8 grewoledhcaW</span><br>
+            <span class="reverse-text">repl&uuml;hwS 97183</span><br>
+            <span class="reverse-text">dnalhcstueD</span>
         </p>
         <p class="non-selectable">
             <strong>Kontakt:</strong><br>
-            <span class="hidden-content">moc.kooltuo@ekeneuhlzcsuhdna</span>
+            <span class="reverse-text">moc.kooltuo@ekeneuhlzcsuhdna</span>
         </p>
         <p>
             <strong>Hinweis:</strong><br>
@@ -61,14 +57,12 @@
     </div>
 </section>
 
-<style>
-    .hidden-content {
-        unicode-bidi: bidi-override; /* Rückwärtsanzeige aktivieren */
-        direction: rtl; /* Textfluss von rechts nach links */
-    }
-</style>
-
-
+<script>
+    // Funktion zum Umdrehen des Textes
+    document.querySelectorAll('.reverse-text').forEach(function (element) {
+        element.textContent = element.textContent.split('').reverse().join('');
+    });
+</script>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3 text-center">
