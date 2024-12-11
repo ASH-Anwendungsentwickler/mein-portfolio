@@ -79,35 +79,103 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section with Tabs -->
     <section id="projects" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center text-3xl font-bold mb-5">Meine Projekte</h2>
-            <div class="row project-grid">
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <div class="project-card bg-white">
-                        <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid">
-                        <div class="p-3">
-                            <h3 class="text-lg font-bold">Projekt 1</h3>
-                            <p>Beschreibung: Dies ist eine tolle Anwendung, die ich entwickelt habe.</p>
+
+            <!-- Tabs Navigation -->
+            <ul class="nav nav-tabs justify-content-center mb-4" id="projectTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">Alle</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="games-tab" data-bs-toggle="tab" data-bs-target="#games" type="button" role="tab">Spiele</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tools-tab" data-bs-toggle="tab" data-bs-target="#tools" type="button" role="tab">Tools</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="websites-tab" data-bs-toggle="tab" data-bs-target="#websites" type="button" role="tab">Websites</button>
+                </li>
+            </ul>
+
+            <!-- Tabs Content -->
+            <div class="tab-content" id="projectTabsContent">
+                <!-- All Projects Tab -->
+                <div class="tab-pane fade show active" id="all" role="tabpanel">
+                    <div class="row project-grid">
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="project-card bg-white">
+                                <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid">
+                                <div class="p-3">
+                                    <h3 class="text-lg font-bold">Projekt 1 (Spiel)</h3>
+                                    <p>Beschreibung: Ein spannendes Spiel, das ich entwickelt habe.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="project-card bg-white">
+                                <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid">
+                                <div class="p-3">
+                                    <h3 class="text-lg font-bold">Projekt 2 (Tool)</h3>
+                                    <p>Beschreibung: Ein hilfreiches Tool zur Problemlösung.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="project-card bg-white">
+                                <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid">
+                                <div class="p-3">
+                                    <h3 class="text-lg font-bold">Projekt 3 (Website)</h3>
+                                    <p>Beschreibung: Eine moderne Website, die ich gestaltet habe.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <div class="project-card bg-white">
-                        <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid">
-                        <div class="p-3">
-                            <h3 class="text-lg font-bold">Projekt 2</h3>
-                            <p>Beschreibung: Ein Tool, das ein Problem löst.</p>
+
+                <!-- Games Tab -->
+                <div class="tab-pane fade" id="games" role="tabpanel">
+                    <div class="row project-grid">
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="project-card bg-white">
+                                <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid">
+                                <div class="p-3">
+                                    <h3 class="text-lg font-bold">Projekt 1 (Spiel)</h3>
+                                    <p>Beschreibung: Ein spannendes Spiel, das ich entwickelt habe.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <div class="project-card bg-white">
-                        <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid">
-                        <div class="p-3">
-                            <h3 class="text-lg font-bold">Projekt 3</h3>
-                            <p>Beschreibung: Eine innovative Lösung, die ich entwickelt habe.</p>
+
+                <!-- Tools Tab -->
+                <div class="tab-pane fade" id="tools" role="tabpanel">
+                    <div class="row project-grid">
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="project-card bg-white">
+                                <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid">
+                                <div class="p-3">
+                                    <h3 class="text-lg font-bold">Projekt 2 (Tool)</h3>
+                                    <p>Beschreibung: Ein hilfreiches Tool zur Problemlösung.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Websites Tab -->
+                <div class="tab-pane fade" id="websites" role="tabpanel">
+                    <div class="row project-grid">
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="project-card bg-white">
+                                <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid">
+                                <div class="p-3">
+                                    <h3 class="text-lg font-bold">Projekt 3 (Website)</h3>
+                                    <p>Beschreibung: Eine moderne Website, die ich gestaltet habe.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
