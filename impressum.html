@@ -21,6 +21,13 @@
         .container {
             max-width: 800px;
         }
+        .non-selectable {
+            user-select: none; /* Verhindert Markieren und Kopieren */
+        }
+        .hidden-content {
+            unicode-bidi: bidi-override; /* Erschwert das automatische Lesen */
+            direction: rtl; /* Textfluss umkehren */
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -36,15 +43,15 @@
         <div class="container bg-white shadow rounded p-5">
             <h1 class="text-3xl font-bold mb-4">Impressum</h1>
             <p><strong>Angaben gemäß &sect; 5 TMG:</strong></p>
-            <p>
-                Adnan Schulze-Hüneke<br>
-                Wacholderweg 8<br>
-                38179 Schwülper<br>
-                Deutschland
+            <p class="non-selectable hidden-content">
+                <span>ekenuhzehlucsnadA</span> <br>
+                <span>8 grewoledhcaW</span><br>
+                <span>replühwS 97183</span><br>
+                <span>dnalhcstueD</span>
             </p>
-            <p>
+            <p class="non-selectable hidden-content">
                 <strong>Kontakt:</strong><br>
-                E-Mail: <a href="mailto:adnanschulzehueneke@outlook.de">adnanschulzehueneke@outlook.de</a>
+                <span>moc.kooltuo@ekeneuhlzcshulna</span>
             </p>
             <p>
                 <strong>Hinweis:</strong><br>
