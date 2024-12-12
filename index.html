@@ -43,33 +43,16 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">Mein Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Über mich</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projekte</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+    <!-- Oberer Bereich ohne Menü, aber als Highlight -->
+    <div class="py-4 text-center bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 text-white">
+        <h1 class="text-4xl font-bold tracking-wide">Mein Portfolio</h1>
+    </div>
 
     <!-- Hero Section -->
     <header class="bg-blue-600 text-white py-5">
         <div class="container text-center">
-            <h1 class="text-4xl font-bold">Willkommen zu meinem Portfolio</h1>
+            <h2 class="text-4xl font-bold">Willkommen zu meinem Portfolio</h2>
             <p class="mt-3 text-lg">Entdecke meine Projekte und Fähigkeiten!</p>
         </div>
     </header>
@@ -80,7 +63,7 @@
             <div class="row">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h2 class="text-3xl font-bold">Über mich</h2>
-                    <p class="mt-3">Ich bin ein leidenschaftlicher Entwickler mit Erfahrung in der Erstellung moderner Webanwendungen. Meine Fähigkeiten umfassen HTML, CSS, JavaScript, und mehr.</p>
+                    <p class="mt-3">Ich bin ein leidenschaftlicher Entwickler mit Erfahrung in der Erstellung moderner Webanwendungen. Meine Fähigkeiten umfassen HTML, CSS, JavaScript und mehr.</p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <img src="about-me.jpg" alt="Über mich" class="img-fluid rounded">
@@ -119,7 +102,7 @@
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="projekt1-gross.jpg" data-lightbox="all-gallery" data-title="Projekt 1 (Spiel)">
-                                    <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid">
+                                    <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Projekt 1 (Spiel)</h3>
@@ -131,7 +114,7 @@
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="projekt2-gross.jpg" data-lightbox="all-gallery" data-title="Projekt 2 (Tool)">
-                                    <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid">
+                                    <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Projekt 2 (Tool)</h3>
@@ -143,7 +126,7 @@
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="projekt3-gross.jpg" data-lightbox="all-gallery" data-title="Projekt 3 (Website)">
-                                    <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid">
+                                    <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Projekt 3 (Website)</h3>
@@ -152,22 +135,27 @@
                             </div>
                         </div>
 
-                        <!-- Hier kommt auch das Migrationtool ins "Alle"-Tab -->
+                        <!-- Migrationtool im "Alle"-Tab -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
-                                <!-- Nur ein Bild, wird per CSS klein angezeigt, bei Klick original -->
                                 <a href="migrationtool.png" data-lightbox="all-gallery" data-title="Migrationtool (Tool)">
-                                    <img src="migrationtool.png" alt="Migrationtool" class="img-fluid" style="max-width: 300px;">
+                                    <img src="migrationtool.png" alt="Migrationtool" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Migrationtool (Tool)</h3>
-                                    <p>Dieses Migrationtool ermöglicht das Laden, Bereinigen und Verarbeiten von Datensätzen aus unterschiedlichen Quellen. Es unterstützt reguläre Ausdrücke für flexible Datenbearbeitung und bietet integrierte SQL-Abfragen, die auch für Anwender ohne SQL-Kenntnisse geeignet sind. Zudem können Daten direkt in die Datenbank gelesen oder geschrieben werden.</p>
-                                    <p class="mt-2 mb-0">
-                                        <span class="badge bg-info text-dark fw-bold">C# und Windows Forms</span>
-                                    </p>
+                                    <p>Das Migrationtool ermöglicht das Laden, Bereinigen und Verarbeiten von Datensätzen aus verschiedenen Quellen. Mithilfe regulärer Ausdrücke können Daten flexibel angepasst werden. Integrierte, vorkonfigurierte SQL-Abfragen erleichtern auch Anwendern ohne SQL-Kenntnisse den Zugriff auf die Daten. Abschließend lassen sich die Datensätze direkt in die Datenbank einlesen oder aus ihr exportieren.</p>
+                                    <div class="mt-3">
+                                        <h4 class="text-info fw-bold mb-2">Technologie:</h4>
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item"><span class="text-info fw-bold">C#</span></li>
+                                            <li class="list-inline-item">|</li>
+                                            <li class="list-inline-item"><span class="text-info fw-bold">Windows Forms</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -177,7 +165,7 @@
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="projekt1-gross.jpg" data-lightbox="games-gallery" data-title="Projekt 1 (Spiel)">
-                                    <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid">
+                                    <img src="projekt1.jpg" alt="Projekt 1" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Projekt 1 (Spiel)</h3>
@@ -194,7 +182,7 @@
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="projekt2-gross.jpg" data-lightbox="tools-gallery" data-title="Projekt 2 (Tool)">
-                                    <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid">
+                                    <img src="projekt2.jpg" alt="Projekt 2" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Projekt 2 (Tool)</h3>
@@ -203,18 +191,23 @@
                             </div>
                         </div>
 
-                        <!-- Migrationtool jetzt auch hier -->
+                        <!-- Migrationtool im "Tools"-Tab -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="migrationtool.png" data-lightbox="tools-gallery" data-title="Migrationtool (Tool)">
-                                    <img src="migrationtool.png" alt="Migrationtool" class="img-fluid" style="max-width: 300px;">
+                                    <img src="migrationtool.png" alt="Migrationtool" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Migrationtool (Tool)</h3>
-                                    <p>Dieses Migrationtool ermöglicht das Laden, Bereinigen und Verarbeiten von Datensätzen aus unterschiedlichen Quellen. Es unterstützt reguläre Ausdrücke für flexible Datenbearbeitung und bietet integrierte SQL-Abfragen, die auch für Anwender ohne SQL-Kenntnisse geeignet sind. Zudem können Daten direkt in die Datenbank gelesen oder geschrieben werden.</p>
-                                    <p class="mt-2 mb-0">
-                                        <span class="badge bg-info text-dark fw-bold">C# und Windows Forms</span>
-                                    </p>
+                                    <p>Das Migrationtool ermöglicht das Laden, Bereinigen und Verarbeiten von Datensätzen aus verschiedenen Quellen. Mithilfe regulärer Ausdrücke können Daten flexibel angepasst werden. Integrierte, vorkonfigurierte SQL-Abfragen erleichtern auch Anwendern ohne SQL-Kenntnisse den Zugriff auf die Daten. Abschließend lassen sich die Datensätze direkt in die Datenbank einlesen oder aus ihr exportieren.</p>
+                                    <div class="mt-3">
+                                        <h4 class="text-info fw-bold mb-2">Technologie:</h4>
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item"><span class="text-info fw-bold">C#</span></li>
+                                            <li class="list-inline-item">|</li>
+                                            <li class="list-inline-item"><span class="text-info fw-bold">Windows Forms</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +220,7 @@
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
                             <div class="project-card bg-white">
                                 <a href="projekt3-gross.jpg" data-lightbox="websites-gallery" data-title="Projekt 3 (Website)">
-                                    <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid">
+                                    <img src="projekt3.jpg" alt="Projekt 3" class="img-fluid w-100">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Projekt 3 (Website)</h3>
