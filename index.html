@@ -23,12 +23,26 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9; /* Helles Grau */
+            color: #333333; /* Dunkles Grau für Text */
+        }
+        .header {
+            /* Blauverlauf für den Header */
+            background: linear-gradient(90deg, #0056b3, #007bff);
+            color: #ffffff;
+        }
+        .header h1 {
+            font-weight: bold;
+        }
+        .section-title {
+            color: #0056b3; /* Blaue Akzentfarbe für Überschriften */
         }
         .project-card {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s;
+            background-color: #ffffff;
         }
         .project-card:hover {
             transform: scale(1.05);
@@ -39,15 +53,19 @@
             object-fit: cover;
             object-position: center;
         }
+        .tech-title {
+            color: #0056b3;
+        }
+        footer {
+            background-color: #333333; 
+            color: #ffffff;
+        }
         .captcha-container {
-            display: none; /* Wird erst bei Klick angezeigt */
+            display: none; 
             margin-top: 20px;
         }
         .non-selectable {
-            user-select: none; /* Verhindert Markieren und Kopieren */
-        }
-        .tech-title {
-            color: #333333;
+            user-select: none; 
         }
         .tech-list .text-info {
             color: #333333 !important;
@@ -57,11 +75,12 @@
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body>
 
     <!-- Oberer Bereich ohne Menü, aber als Highlight -->
-    <div class="py-4 text-center bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 text-white">
-        <h1 class="text-4xl font-bold tracking-wide">Mein Portfolio</h1>
+    <div class="py-4 text-center header">
+        <h1 class="text-4xl">Mein Portfolio</h1>
+        <p class="mt-2">Willkommen! Entdecke meine Projekte und Fähigkeiten.</p>
     </div>
 
     <!-- Hero Section -->
@@ -76,12 +95,14 @@
     <section id="about" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="text-3xl font-bold">Über mich</h2>
-                    <p class="mt-3">Ich bin ein leidenschaftlicher Entwickler mit Erfahrung in der Erstellung moderner Webanwendungen. Meine Fähigkeiten umfassen HTML, CSS, JavaScript und mehr.</p>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="about-me.jpg" alt="Über mich" class="img-fluid rounded">
+                <div class="col-lg-8 offset-lg-2" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold section-title text-center">Über mich</h2>
+                    <p class="mt-3 text-center">
+                        Ich bin ein erfahrener Softwareentwickler mit Fokus auf C#, WPF und SQL. Neben professionellen Projekten im Desktop- und Webbereich widme ich mich in meiner Freizeit komplexen logischen Herausforderungen und KI-Experimenten. Strukturierte Arbeitsweisen, Zuverlässigkeit und stetige Weiterbildung sind fester Bestandteil meiner Arbeitsphilosophie.
+                    </p>
+                    <p class="mt-3 text-center">
+                        <strong>Motto:</strong> „Komplexen Problemen mit einfachen Lösungen begegnen.“
+                    </p>
                 </div>
             </div>
         </div>
@@ -90,7 +111,7 @@
     <!-- Projects Section with Tabs -->
     <section id="projects" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center text-3xl font-bold mb-5">Meine Projekte</h2>
+            <h2 class="text-center text-3xl font-bold mb-5 section-title">Meine Projekte</h2>
 
             <!-- Tabs Navigation -->
             <ul class="nav nav-tabs justify-content-center mb-4" id="projectTabs" role="tablist">
@@ -127,7 +148,7 @@
                     <div class="row project-grid">
                         <!-- Migrationtool -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="migrationtool.png" data-lightbox="all-gallery" data-title="Migrationtool (Tool)">
                                     <img src="migrationtool.png" alt="Migrationtool">
                                 </a>
@@ -150,7 +171,7 @@
 
                         <!-- TicTacToe AI -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="tictactoeai.png" data-lightbox="all-gallery" data-title="TicTacToe AI (Spiel)">
                                     <img src="tictactoeai.png" alt="TicTacToe AI">
                                 </a>
@@ -173,7 +194,7 @@
 
                         <!-- Das Kriegsspiel -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="daskriegsspiel.png" data-lightbox="all-gallery" data-title="Das Kriegsspiel (Spiel)">
                                     <img src="daskriegsspiel.png" alt="Das Kriegsspiel">
                                 </a>
@@ -196,7 +217,7 @@
 
                         <!-- Virtuelle Warteschlange (Anwendungen) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="virtuellewarteschlange.png" data-lightbox="all-gallery" data-title="Virtuelle Warteschlange (Anwendung)">
                                     <img src="virtuellewarteschlange.png" alt="Virtuelle Warteschlange">
                                 </a>
@@ -219,7 +240,7 @@
 
                         <!-- Snake (Spiel) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="snake.png" data-lightbox="all-gallery" data-title="Snake (Spiel)">
                                     <img src="snake.png" alt="Snake">
                                 </a>
@@ -242,7 +263,7 @@
 
                         <!-- Kindertaschenrechner (Tool) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="kindertaschenrechner.png" data-lightbox="all-gallery" data-title="Kindertaschenrechner (Tool)">
                                     <img src="kindertaschenrechner.png" alt="Kindertaschenrechner">
                                 </a>
@@ -265,7 +286,7 @@
 
                         <!-- Drohnen Kampf Simulation (Anwendung) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="drohnensimulation.png" data-lightbox="all-gallery" data-title="Drohnen Kampf Simulation (Anwendung)">
                                     <img src="drohnensimulation.png" alt="Drohnen Kampf Simulation">
                                 </a>
@@ -288,7 +309,7 @@
 
                         <!-- Raketenkommando (Spiel) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="raketenkommand.png" data-lightbox="all-gallery" data-title="Raketenkommando (Spiel)">
                                     <img src="raketenkommand.png" alt="Raketenkommando">
                                 </a>
@@ -311,7 +332,7 @@
 
                         <!-- Vier gewinnt (Spiel) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="viergewinnt.png" data-lightbox="all-gallery" data-title="Vier gewinnt (Spiel)">
                                     <img src="viergewinnt.png" alt="Vier gewinnt">
                                 </a>
@@ -334,7 +355,7 @@
 
                         <!-- Meine Künstliche Intelligenz (KI) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="meineki.png" data-lightbox="all-gallery" data-title="Meine Künstliche Intelligenz (KI)">
                                     <img src="meineki.png" alt="Meine Künstliche Intelligenz">
                                 </a>
@@ -357,7 +378,7 @@
 
                         <!-- Bildanalyse (Tool) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="bildanalyse.png" data-lightbox="all-gallery" data-title="Bildanalyse (Tool)">
                                     <img src="bildanalyse.png" alt="Bildanalyse">
                                 </a>
@@ -380,7 +401,7 @@
 
                         <!-- IPv4 Adress Berechnungen (Tool) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="ipv4berechnen.png" data-lightbox="all-gallery" data-title="IPv4 Adress Berechnungen (Tool)">
                                     <img src="ipv4berechnen.png" alt="IPv4 Adress Berechnungen">
                                 </a>
@@ -403,7 +424,7 @@
 
                         <!-- Unsere Welt (3D) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="unserewelt.png" data-lightbox="all-gallery" data-title="Unsere Welt (3D)">
                                     <img src="unserewelt.png" alt="Unsere Welt">
                                 </a>
@@ -426,7 +447,7 @@
 
                         <!-- Spar5050 (Anwendung) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="sparen.png" data-lightbox="all-gallery" data-title="Spar5050 (Anwendung)">
                                     <img src="sparen.png" alt="Spar5050">
                                 </a>
@@ -449,7 +470,7 @@
 
                         <!-- Mining Dashboard (Bitcoins) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="bitcoinmining.png" data-lightbox="all-gallery" data-title="Mining Dashboard (Bitcoins)">
                                     <img src="bitcoinmining.png" alt="Mining Dashboard">
                                 </a>
@@ -472,7 +493,7 @@
 
                         <!-- Vokabeltrainer (Anwendung) - Windows Forms -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="vokabeltrainer.png" data-lightbox="all-gallery" data-title="Vokabeltrainer (Anwendung)">
                                     <img src="vokabeltrainer.png" alt="Vokabeltrainer">
                                 </a>
@@ -495,7 +516,7 @@
 
                         <!-- Sql Lern App (Anwendung) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="sqllernapp.png" data-lightbox="all-gallery" data-title="Sql Lern App (Anwendung)">
                                     <img src="sqllernapp.png" alt="Sql Lern App">
                                 </a>
@@ -524,7 +545,7 @@
                     <div class="row project-grid">
                         <!-- TicTacToe AI -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="tictactoeai.png" data-lightbox="games-gallery" data-title="TicTacToe AI (Spiel)">
                                     <img src="tictactoeai.png" alt="TicTacToe AI">
                                 </a>
@@ -547,7 +568,7 @@
 
                         <!-- Das Kriegsspiel -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="daskriegsspiel.png" data-lightbox="games-gallery" data-title="Das Kriegsspiel (Spiel)">
                                     <img src="daskriegsspiel.png" alt="Das Kriegsspiel">
                                 </a>
@@ -570,7 +591,7 @@
 
                         <!-- Snake (Spiel) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="snake.png" data-lightbox="games-gallery" data-title="Snake (Spiel)">
                                     <img src="snake.png" alt="Snake">
                                 </a>
@@ -593,7 +614,7 @@
 
                         <!-- Raketenkommando (Spiel) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="raketenkommand.png" data-lightbox="games-gallery" data-title="Raketenkommando (Spiel)">
                                     <img src="raketenkommand.png" alt="Raketenkommando">
                                 </a>
@@ -616,7 +637,7 @@
 
                         <!-- Vier gewinnt (Spiel) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="viergewinnt.png" data-lightbox="games-gallery" data-title="Vier gewinnt (Spiel)">
                                     <img src="viergewinnt.png" alt="Vier gewinnt">
                                 </a>
@@ -644,7 +665,7 @@
                     <div class="row project-grid">
                         <!-- Migrationtool -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="migrationtool.png" data-lightbox="tools-gallery" data-title="Migrationtool (Tool)">
                                     <img src="migrationtool.png" alt="Migrationtool">
                                 </a>
@@ -667,7 +688,7 @@
 
                         <!-- Kindertaschenrechner -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="kindertaschenrechner.png" data-lightbox="tools-gallery" data-title="Kindertaschenrechner (Tool)">
                                     <img src="kindertaschenrechner.png" alt="Kindertaschenrechner">
                                 </a>
@@ -690,7 +711,7 @@
 
                         <!-- Bildanalyse -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="bildanalyse.png" data-lightbox="tools-gallery" data-title="Bildanalyse (Tool)">
                                     <img src="bildanalyse.png" alt="Bildanalyse">
                                 </a>
@@ -713,7 +734,7 @@
 
                         <!-- IPv4 Adress Berechnungen -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="ipv4berechnen.png" data-lightbox="tools-gallery" data-title="IPv4 Adress Berechnungen (Tool)">
                                     <img src="ipv4berechnen.png" alt="IPv4 Adress Berechnungen">
                                 </a>
@@ -749,7 +770,7 @@
                     <div class="row project-grid">
                         <!-- Virtuelle Warteschlange -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="virtuellewarteschlange.png" data-lightbox="anwendungen-gallery" data-title="Virtuelle Warteschlange (Anwendung)">
                                     <img src="virtuellewarteschlange.png" alt="Virtuelle Warteschlange">
                                 </a>
@@ -772,7 +793,7 @@
 
                         <!-- Drohnen Kampf Simulation -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="drohnensimulation.png" data-lightbox="anwendungen-gallery" data-title="Drohnen Kampf Simulation (Anwendung)">
                                     <img src="drohnensimulation.png" alt="Drohnen Kampf Simulation">
                                 </a>
@@ -795,7 +816,7 @@
 
                         <!-- Spar5050 -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="sparen.png" data-lightbox="anwendungen-gallery" data-title="Spar5050 (Anwendung)">
                                     <img src="sparen.png" alt="Spar5050">
                                 </a>
@@ -818,7 +839,7 @@
 
                         <!-- Vokabeltrainer (Windows Forms) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="vokabeltrainer.png" data-lightbox="anwendungen-gallery" data-title="Vokabeltrainer (Anwendung)">
                                     <img src="vokabeltrainer.png" alt="Vokabeltrainer">
                                 </a>
@@ -841,7 +862,7 @@
 
                         <!-- Sql Lern App -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="sqllernapp.png" data-lightbox="anwendungen-gallery" data-title="Sql Lern App (Anwendung)">
                                     <img src="sqllernapp.png" alt="Sql Lern App">
                                 </a>
@@ -870,7 +891,7 @@
                     <div class="row project-grid">
                         <!-- Meine Künstliche Intelligenz -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="meineki.png" data-lightbox="ki-gallery" data-title="Meine Künstliche Intelligenz (KI)">
                                     <img src="meineki.png" alt="Meine Künstliche Intelligenz">
                                 </a>
@@ -898,7 +919,7 @@
                     <div class="row project-grid">
                         <!-- Unsere Welt (3D) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="unserewelt.png" data-lightbox="dreid-gallery" data-title="Unsere Welt (3D)">
                                     <img src="unserewelt.png" alt="Unsere Welt">
                                 </a>
@@ -926,13 +947,13 @@
                     <div class="row project-grid">
                         <!-- Mining Dashboard (Bitcoins) -->
                         <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <div class="project-card bg-white">
+                            <div class="project-card">
                                 <a href="bitcoinmining.png" data-lightbox="bitcoins-gallery" data-title="Mining Dashboard (Bitcoins)">
                                     <img src="bitcoinmining.png" alt="Mining Dashboard">
                                 </a>
                                 <div class="p-3">
                                     <h3 class="text-lg font-bold">Mining Dashboard (Bitcoins)</h3>
-                                    <p>Das Mining Dashboard ermöglicht Wallet-Verwaltung und Experimente mit Bitcoin Solo Mining. Obwohl oft nicht rentabel, liefert es wertvolle Einblicke in den Mining-Prozess. Das WPF-Interface stellt Statistiken klar dar, während C# die Abläufe steuert.</p>
+                                    <p>Das Mining Dashboard ermöglicht die Verwaltung von Wallets und bietet Experimente mit Bitcoin Solo Mining. Obwohl oft nicht rentabel, liefert es wertvolle Einblicke in den Mining-Prozess. Das WPF-Interface stellt Statistiken klar dar, während C# die Abläufe steuert.</p>
                                     <div class="mt-3">
                                         <h4 class="tech-title fw-bold mb-2">Technologie:</h4>
                                         <ul class="list-inline mb-0 tech-list">
@@ -956,7 +977,7 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container text-center">
-            <h2 class="text-3xl font-bold">Kontakt</h2>
+            <h2 class="text-3xl font-bold section-title">Kontakt</h2>
             <p class="mt-3">Hast du Interesse an einer Zusammenarbeit? Kontaktiere mich!</p>
             <button id="captcha-button" class="btn btn-primary mt-3">Kontakt aufnehmen</button>
             <div class="captcha-container" id="captcha-container">
@@ -968,7 +989,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-3 text-center">
+    <footer class="py-3 text-center">
         <p>&copy; 2024 ASH. Alle Rechte vorbehalten. <a href="impressum.html" class="text-white">Impressum</a></p>
     </footer>
 
