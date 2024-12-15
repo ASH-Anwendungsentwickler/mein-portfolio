@@ -17,55 +17,72 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9; /* Helles Grau passend zum Portfolio */
+            color: #333333; /* Dunkles Grau für Text */
+        }
+        .navbar {
+            background: linear-gradient(90deg, #0056b3, #007bff); /* Blauverlauf wie im Portfolio */
+        }
+        .navbar .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
         }
         .container {
             max-width: 800px;
         }
         .non-selectable {
-            user-select: none; /* Verhindert Markieren und Kopieren */
-            -webkit-user-select: none; /* Safari */
-            -ms-user-select: none; /* IE */
+            user-select: none; 
+            -webkit-user-select: none; 
+            -ms-user-select: none; 
+        }
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        a.text-white:hover {
+            color: #ffffff;
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Mein Portfolio</a>
         </div>
     </nav>
 
-<!-- Impressum Section -->
-<section class="py-5">
-    <div class="container bg-white shadow rounded p-5">
-        <h1 class="text-3xl font-bold mb-4">Impressum</h1>
-        <p><strong>Angaben gemäß &sect; 5 TMG:</strong></p>
-        <p class="non-selectable">
-            <span class="reverse-text">ekenüH-ezluhcS nandA</span><br>
-            <span class="reverse-text">8 gewredlohcaW</span><br>
-            <span class="reverse-text">replüwhcS 97183</span><br>
-            <span class="reverse-text">dnalhcstueD</span>
-        </p>
-        <p class="non-selectable">
-            <strong>Kontakt:</strong><br>
-            <span class="reverse-text">ed.kooltuo@ekeneuhezluhcsnanda</span>
-        </p>
-        <p>
-            <strong>Hinweis:</strong><br>Diese Website dient ausschließlich der privaten Präsentation meiner Projekte<br>und verfolgt keine geschäftsmäßigen Zwecke.<br>Diese Seite wird bei GitHub Pages gehostet.
-        </p>
-    </div>
-</section>
+    <!-- Impressum Section -->
+    <section class="py-5">
+        <div class="container bg-white shadow rounded p-5">
+            <h1 class="text-3xl font-bold mb-4">Impressum</h1>
+            <p><strong>Angaben gemäß &sect; 5 TMG:</strong></p>
+            <p class="non-selectable">
+                <span class="reverse-text">ekenüH-ezluhcS nandA</span><br>
+                <span class="reverse-text">8 gewredlohcaW</span><br>
+                <span class="reverse-text">replüwhcS 97183</span><br>
+                <span class="reverse-text">dnalhcstueD</span>
+            </p>
+            <p class="non-selectable">
+                <strong>Kontakt:</strong><br>
+                <span class="reverse-text">ed.kooltuo@ekeneuhezluhcsnanda</span>
+            </p>
+            <p>
+                <strong>Hinweis:</strong><br>Diese Website dient ausschließlich der privaten Präsentation meiner Projekte<br>und verfolgt keine geschäftsmäßigen Zwecke.<br>Diese Seite wird bei GitHub Pages gehostet.
+            </p>
+        </div>
+    </section>
 
-<script>
-    // Funktion zum Umdrehen des Textes
-    document.querySelectorAll('.reverse-text').forEach(function (element) {
-        element.textContent = element.textContent.split('').reverse().join('');
-    });
-</script>
+    <script>
+        // Funktion zum Umdrehen des Textes
+        document.querySelectorAll('.reverse-text').forEach(function (element) {
+            element.textContent = element.textContent.split('').reverse().join('');
+        });
+    </script>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-3 text-center">
+    <footer class="py-3 text-center">
         <p>&copy; 2024 ASH. Alle Rechte vorbehalten. <a href="index.html" class="text-white">Zurück zur Startseite</a></p>
     </footer>
 
