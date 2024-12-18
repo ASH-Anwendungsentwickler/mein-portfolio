@@ -73,6 +73,18 @@
         .tech-list .text-info.fw-bold {
             font-weight: 700;
         }
+        .development-project {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.development-project img {
+    flex: 1;
+    max-width: 25%;
+    object-fit: cover;
+    margin: 0;
+}
+
     </style>
 </head>
 <body>
@@ -138,6 +150,9 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="bitcoins-tab" data-bs-toggle="tab" data-bs-target="#bitcoins" type="button" role="tab">Bitcoins</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="development-tab" data-bs-toggle="tab" data-bs-target="#development" type="button" role="tab"><strong>Projekte in Entwicklung</strong></button>
                 </li>
             </ul>
 
@@ -969,6 +984,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="tab-pane fade" id="development" role="tabpanel">
+    <div class="development-project" data-aos="fade-up">
+        <div class="w-100">
+            <h3 class="text-lg font-bold">Beispielprojekt: Intelligente Robotersteuerung</h3>
+            <p>Dieses Projekt entwickelt eine adaptive Robotersteuerung basierend auf maschinellem Lernen. Ziel ist es, dass der Roboter Aufgaben wie Sortieren oder Transportieren eigenständig lernt.</p>
+        </div>
+        <img src="projektbild1.png" alt="Projektbild 1">
+        <img src="projektbild2.png" alt="Projektbild 2">
+        <img src="projektbild3.png" alt="Projektbild 3">
+        <img src="projektbild4.png" alt="Projektbild 4">
+    </div>
+</div>
+
 
             </div>
         </div>
